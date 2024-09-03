@@ -1,0 +1,56 @@
+.service_item{
+    padding: 1rem;
+    border-bottom: 1px solid #faa83586;
+    border-right: 1px solid #faa83586;
+    border-radius: 0.5rem;
+
+
+}
+.service_img{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background: #ffa000 ;
+    padding: 0.5rem;
+    margin-bottom: 1rem ;
+    line-height: 50px;
+
+
+}
+.service_img img{
+    width: 100%;
+}
+.service_img h5{
+    font-size: 1.1rem;
+    font-weight: 500;
+
+}
+.service_item p{
+    font-size: .9rem;
+    color: black;
+}
+.sub{
+    background-color: #ffa000;
+    width: 7.8rem;
+    font-size: 2rem;
+    padding: 5px;
+    font-family: cursive;
+    border-radius: 10px;
+    
+}
+.sub2{
+    background-color: #ffa000;
+    width: 11rem;
+    font-size: 2rem;
+    padding: 5px;
+    font-family: cursive;
+    border-radius: 10px;
+
+}
+.featured_tour-title{
+    font-size: 2.3rem;
+    font-weight: 500;
+}
