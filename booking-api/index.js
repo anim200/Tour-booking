@@ -41,7 +41,7 @@ app.use('/api/v1/booking', bookingRoute);
 
 // Root route
 app.get('/', (req, res) => {
-    res.send('App is working');
+    res.send('App is working very fine');
 });
 
 // Start server
