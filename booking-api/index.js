@@ -13,7 +13,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 const corsOptions = {
-  origin: 'https://tour-booking-frontend-murex.vercel.app', // Allow only your frontend
+  origin: '*', // Allow only your frontend
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed HTTP methods
   credentials: true, // If you're using cookies or sessions
 };
