@@ -13,7 +13,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 const corsOptions ={
-    origin:["https://tour-booking.vercel.app"],
+    origin:[""],
     credentials:true
 }
 
