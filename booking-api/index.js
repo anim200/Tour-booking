@@ -30,6 +30,9 @@ const connect = async () => {
 // Middleware
 app.use(express.json());
 app.use(cors(corsOptions));
+// Handle preflight (OPTIONS) requests
+app.options('*', cors(corsOptions));
+
 app.use(cookieParser());
 
 // Routes
