@@ -1,15 +1,14 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "index.js", // Specify your entry file
-      "use": "@vercel/node"
+  "functions": {
+    "index.js": {
+      "runtime": "edge"
     }
-  ],
+  },
   "routes": [
     {
-      "src": "/(.*)", // Match all routes
-      "dest": "/index.js" // Route all requests to your entry file
+      "src": "/(.*)",
+      "dest": "/index.js" // Route all requests to your index.js file
     }
   ]
 }
