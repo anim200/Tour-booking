@@ -1,23 +1,16 @@
 {
- "version":2,
-  "name":"tour-booking-api",
-  "builds":[
-
+  "version": 2,
+  "builds": [
     {
-      "src":"index.js",
-      "use":"@vercel/node"
-      
+      "src": "index.js", // Specify your entry file
+      "use": "@vercel/node"
     }
-    
   ],
-  "routes":[
+  "routes": [
     {
-      "src":"/(.*)",
-      "dest":"/index.js"
+      "src": "/(.*)", // Match all routes
+      "dest": "/index.js" // Route all requests to your entry file
     }
-    
   ]
-  
 }
-
 
