@@ -23,7 +23,7 @@ const connect = async () => {
         await mongoose.connect(process.env.MONGO_URL);
         console.log('MongoDB database connected to booking');
     } catch (err) {
-        console.log(err);
+      res.status(500).json({ success: false, error: err.message });
     }
 };
 
