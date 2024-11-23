@@ -49,8 +49,12 @@ app.get('/', (req, res) => {
 });
 
 // Start server
-app.listen(port, () => {
-    connect(); // Connect to the database
-    console.log('Server listening on port', port);
-});
+const startServer = async () => {
+  await connect(); // Ensure database connection is established
+  app.listen(port, () => {
+    console.log(port);
+  });
+};
+
+startServer();
 
