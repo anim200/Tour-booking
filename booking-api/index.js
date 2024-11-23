@@ -12,11 +12,21 @@ import bookingRoute from './routes/bookings.js';
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
+const allowedOrigins = [
+  "https://tour-booking-frontend-gamma.vercel.app", // Your frontend URL
+];
+
 const corsOptions = {
-  origin: 'https://tour-booking-frontend-gamma.vercel.app/',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true, // Allow cookies or credentials
+  origin: (origin, callback) => {
+    if (allowedOrigins.includes(origin) || !origin) {
+      callback(null, true); // Allow the origin
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
 };
+
+app.use(cors(corsOptions));
 // Database connection
 const connect = async () => {
     try {
@@ -30,9 +40,9 @@ const connect = async () => {
 
 // Middleware
 app.use(express.json());
-app.use(cors(corsOptions));
+
 // Handle preflight (OPTIONS) requests
-app.options('*', cors(corsOptions));
+
 
 app.use(cookieParser());
 
