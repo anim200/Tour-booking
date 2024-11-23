@@ -20,12 +20,13 @@ const corsOptions = {
 // Database connection
 const connect = async () => {
     try {
-        await mongoose.connect(process.env.MONGO_URL);
-        console.log('MongoDB database connected to booking');
+      await mongoose.connect(process.env.MONGO_URL);
+      console.log('MongoDB database connected to rough');
     } catch (err) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error('Error connecting to MongoDB:', err.message);
+      process.exit(1);  // Exit the process if DB connection fails
     }
-};
+  };
 
 // Middleware
 app.use(express.json());
