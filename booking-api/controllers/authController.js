@@ -50,6 +50,8 @@ export const login = async (req, res) => {
         );
         res.cookie('accessToken', token, {
             httpOnly: true,
+            secure: process.env.NODE_ENV === 'production', // Secure in production
+            sameSite: 'None', // Allows cross-site cookies
             expiresIn: token.expiresIn,
         }).status(200).json({ success: true, message: "Successfully logged in", data: { ...rest },role });
 
