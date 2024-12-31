@@ -13,8 +13,8 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 const allowedOrigins = [
-  "https://tour-booking-frontend-gamma.vercel.app",
-  "'https://clickart-backend.vercel.app/api/upload-imgur"
+  "https://tour-booking-frontend-gamma.vercel.app"
+
 ];
 
 const corsOptions = {
